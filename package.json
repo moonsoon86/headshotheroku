@@ -1,0 +1,28 @@
+{
+  "name": "headshotheroku",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines":{
+    "node":">=14.15.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node server.js",
+    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moonsoon86/headshotheroku.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moonsoon86/headshotheroku/issues"
+  },
+  "homepage": "https://github.com/moonsoon86/headshotheroku#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

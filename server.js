@@ -1,7 +1,10 @@
 const express = require('express');
 const app =express();
+const router=require("./routes/router");
+
 
 app.use(express.json());
+app.use("/api",router);
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static('client/build'));

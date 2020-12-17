@@ -1,38 +1,96 @@
 .App {
+  min-height:100vh;
+  background: #fec3a6;
+}
+
+.container{
+  width:400px;
+  margin:0 auto;
+  padding-top:200px;
+}
+
+.generator{
+  background:#d2ab99;
+  border-radius: 6px;
+  box-shadow:0px 2px 10px rgba(255, 255, 255, 0.2);
+  padding:15px;
+}
+.generator-header{
+ text-align: center;
+ color:#1d3354;
+ margin-bottom: 20px;
+}
+.generator-password{
+  position:relative;
+  background:#fff;
+  padding:13px 10px;
+  color:blue;
+  height:52px;
+  margin-bottom:15px;
+}
+.copy-btn{
+  position:absolute;
+  background: #ff8500;
+  color:rgb(253, 254, 255);
+  height:45px;
+  padding:10px;
+  cursor:pointer;
+  top:3px;
+  right:3px;
+}
+
+.buton{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.generator-btn{
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  width:100%;
+  padding: 10px 40px 10px 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+  color:rgba(19, 12, 61, 0.8) ;
+  background-color:#294b55;
+  border-radius: 8px;
+  box-shadow: 
+      0px 3px rgba(128,128,128,1), /* gradient effects */
+      0px 4px rgba(118,118,118,1),
+      0px 5px rgb(163, 142, 142),
+      0px 14px 6px -1px rgba(128,128,128,1); /* shadow */
+  
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.generator-btn:hover{
+  cursor: pointer;
+  color:#fff;
+  z-index:5;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.generator-btn:hover:before{
+  
+  transform: scale(1);
+  opacity: 0.5;
 }
-
-.App-link {
-  color: #61dafb;
+.generator-btn::before{
+  content:'';
+  width:100%;
+  height:100%;
+  border-radius: 5px;
+  position: absolute;
+  top:0px;
+  left:0px;
+  transform:scale(.1);
+  background:#e68748;
+  z-index: 0;
+  opacity: 0;
+  transition: all .50s
+} 
+.form-group{
+  display:flex;
+  justify-content:space-between;
+  color:#fff;
+  margin-bottom:15px;
+  font-weight: bolder;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#password-lenght{
+  width:40px;
 }

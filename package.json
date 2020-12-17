@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engines":{
-    "node":">=14.15.0"
+  "engines": {
+    "node": ">=14.15.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node server.js",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "start-client": "npm start --prefix client",
+    "develop": "concurrently -n 'server,client' -c 'red,blue' \"npm run server\" \"npm run start-client\"",
     "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
@@ -23,6 +26,10 @@
   },
   "homepage": "https://github.com/moonsoon86/headshotheroku#readme",
   "dependencies": {
+    "concurrently": "^5.3.0",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
   }
 }

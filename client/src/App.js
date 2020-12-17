@@ -160,7 +160,7 @@ function App() {
                 </div>
                
               
-                <button onClick={handleGeneratePassword} className='generator-btn'>Press Me</button>
+                <button onClick={handleGeneratePassword} className='generator-btn'>Generate Password</button>
                 <ToastContainer
                     position="bottom-left"
                     autoClose={5000}
